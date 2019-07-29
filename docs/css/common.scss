@@ -1,0 +1,241 @@
+@mixin text {
+  line-height: 1.7;
+
+  h1 {
+    font-size: 1.8rem;
+    font-family: 'Comfortaa', cursive;
+    color: #006837;
+    margin: 20px;
+  }
+  p {
+    span {
+      font-size: 1.1rem;
+      color: #009245;
+      display: block;
+      margin: 20px auto;
+      font-weight: bold;
+    }
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN","Hiragino Mincho Pro",HGS明朝E,メイリオ,Meiryo,serif;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+h1 {
+  font-weight: normal;
+}
+
+img {
+  width: 500px;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+}
+
+.gnav {
+  height: 100vh;
+  position: fixed;
+  background: #ffddff;
+  width: 120px;
+
+  .gnav__list {
+    margin-top: 20vh;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    li {
+      margin: 40px 0;
+    }
+    a {
+      font-family: 'Comfortaa', cursive;
+      color: #006837;
+      span {
+        font-size: 0.8rem;
+        float: right;
+        margin: 8px 10px 0 0;
+      }
+    }
+  }
+}
+
+.main-visual {
+  margin-left: 120px;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.main {
+  margin-left: 160px;
+}
+
+.about, .service, .item, .contact {
+  display: flex;
+  margin: 120px 20px 120px 0;
+}
+
+.about__text, .service__text, .item__text {
+  width: 45%;
+  margin: 20px 0 20px 40px;
+  white-space: nowrap;
+
+  @include text;
+}
+
+.about__img, .service__img, .item__img {
+  display: flex;
+  width: 55%;
+}
+
+.about, .item {
+  flex-direction: row-reverse;
+}
+
+.about__text {
+  padding-right: 20px;
+}
+
+.about__img {
+  justify-content: space-around;
+  margin: 40px 20px 0 20px;
+
+  .about__img-1 {
+    width: 45%;
+    object-fit: contain;
+    transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+  }
+  .about__img-2 {
+    width: 35%;
+    margin-left: 10px;
+    margin-bottom: 80px;
+    object-fit: contain;
+    transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+  }
+}
+
+.read-more {
+  font-size: 1.4rem;
+  font-family: 'Comfortaa', cursive;
+  text-align: right;
+  margin-top: 60px;
+
+  a {
+    color: #006837;
+    border-radius: 3px;
+    border-bottom: 2px solid #006837;
+    border-right: 2px solid #006837;
+    padding: 5px;
+    padding-right: 10px;
+    position: relative;
+
+    &::after {
+      content: '';
+    }
+  }
+}
+
+.service {
+
+  .service__text {
+    padding-right: 40px;
+  }
+
+  .service__img {
+    justify-content: space-around;
+    margin: 0 40px;
+    img {
+      object-fit: contain;
+    }
+    .service__img1 {
+      width: 45%;
+      transform: rotate(5deg);
+      -ms-transform: rotate(5deg);
+      -webkit-transform: rotate(5deg);
+    }
+    .service__img2 {
+      width: 35%;
+      margin-top: 50px;
+      transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+      -webkit-transform: rotate(-5deg);
+    }
+  }
+}
+
+.item {
+  .item__text {
+  }
+  .item__img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    img {
+      width: 28%;
+      margin: 10px;
+    }
+  }
+}
+
+.contact {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .contact__text {
+    @include text;
+    width: 35%;
+    margin-left: 40px;
+  }
+  .contact__img {
+    width: 50%;
+    margin-left: 40px;
+    img {
+      margin-top: 40px;
+      width: 80%;
+      transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+      -webkit-transform: rotate(3deg);
+    }
+  }
+  .contact__map {
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    text-align: center;
+    iframe {
+      width: 80%;
+      height: 350px;
+      margin-right: 40px;
+    }
+  }
+}
+
+.footer {
+  margin-top: 40px;
+  margin-left: 120px;
+  background: #ffbbff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+
+  img {
+    width: 30%;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+  small {
+  }
+}
