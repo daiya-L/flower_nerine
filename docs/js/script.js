@@ -1,3 +1,5 @@
+new WOW().init();
+
 $(function(){
   $('a[href^="#"]').click(function(){
     var speed = 1000;
@@ -9,8 +11,30 @@ $(function(){
   });
 });
 
+
+
 $(function() {
   $(".nav-toggle").click(function() {
     $(".nav-toggle div").toggleClass("active");
+    $(".gnav").toggleClass("nav-open");
+  });
+});
+
+$(function() {
+  $(".gnav__list a").click(function() {
+    $(".nav-toggle div").toggleClass("active");
+    $(".gnav").toggleClass("nav-open");
+  });
+});
+
+$(document).ready(function(){
+  $(window).bind("scroll", function() {
+    var navHeight = $( window ).height();
+      if ($(window).scrollTop() > navHeight) {
+        $('nav').addClass('fixed');
+      }
+      else {
+        $('nav').removeClass('fixed');
+      }
   });
 });
