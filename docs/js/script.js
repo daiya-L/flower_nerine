@@ -1,5 +1,9 @@
 new WOW().init();
 
+Pace.on('done', function(){
+  $('.wrap').fadeIn();
+});
+
 $(function(){
   $('a[href^="#"]').click(function(){
     var speed = 1000;
@@ -10,8 +14,6 @@ $(function(){
     return false;
   });
 });
-
-
 
 $(function() {
   $(".nav-toggle").click(function() {

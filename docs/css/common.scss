@@ -20,6 +20,10 @@
   }
 }
 
+.pace-running .wrap {
+  display: none;
+}
+
 body {
   box-sizing: border-box;
 }
@@ -988,6 +992,7 @@ img {
   }
   .nav-open {
     opacity: 1;
+    -webkit-transform: translateX(60vw);
     transform: translateX(60vw);
     transition: ease .8s;
   }
